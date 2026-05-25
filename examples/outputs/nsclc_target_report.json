@@ -1,0 +1,219 @@
+{
+  "query": "non-small cell lung cancer",
+  "run_timestamp": "2026-05-25T15:03:33.498915Z",
+  "num_targets_evaluated": 3,
+  "targets": [
+    {
+      "rank": 1,
+      "gene_symbol": "EGFR",
+      "gene_name": "",
+      "ensembl_id": "",
+      "composite_score": 0.887,
+      "evidence": {
+        "opentargets_overall": 0.0,
+        "genetic_association": 0.933,
+        "known_drug": 0.0,
+        "string_hub_score": 0.999,
+        "pubmed_recency": 1.0,
+        "total_publications": 26606,
+        "clinical_precedent": "Approved: osimertinib, erlotinib, gefitinib",
+        "subcellular_locations": [
+          "Cell membrane"
+        ],
+        "is_membrane_protein": true,
+        "is_kinase": true,
+        "recent_publications": []
+      },
+      "reasoning": "EGFR ranks first due to its high genetic association score, high string hub score, and high pubmed recency score, indicating strong biological validation and recent research interest.",
+      "novelty_flag": false,
+      "druggability": "high"
+    },
+    {
+      "rank": 2,
+      "gene_symbol": "KRAS",
+      "gene_name": "",
+      "ensembl_id": "",
+      "composite_score": 0.842,
+      "evidence": {
+        "opentargets_overall": 0.0,
+        "genetic_association": 0.0,
+        "known_drug": 0.0,
+        "string_hub_score": 0.998,
+        "pubmed_recency": 1.0,
+        "total_publications": 7937,
+        "clinical_precedent": "None",
+        "subcellular_locations": [
+          "Cytoplasm"
+        ],
+        "is_membrane_protein": false,
+        "is_kinase": true,
+        "recent_publications": []
+      },
+      "reasoning": "KRAS ranks second due to its high string hub score and high pubmed recency score, indicating its importance in the protein-protein interaction network and recent research interest.",
+      "novelty_flag": true,
+      "druggability": "medium"
+    },
+    {
+      "rank": 3,
+      "gene_symbol": "TP53",
+      "gene_name": "",
+      "ensembl_id": "",
+      "composite_score": 0.776,
+      "evidence": {
+        "opentargets_overall": 0.0,
+        "genetic_association": 0.0,
+        "known_drug": 0.0,
+        "string_hub_score": 0.999,
+        "pubmed_recency": 1.0,
+        "total_publications": 10306,
+        "clinical_precedent": "None",
+        "subcellular_locations": [
+          "Nucleus"
+        ],
+        "is_membrane_protein": false,
+        "is_kinase": false,
+        "recent_publications": []
+      },
+      "reasoning": "TP53 ranks third due to its high string hub score and high pubmed recency score, indicating its importance in the protein-protein interaction network and recent research interest.",
+      "novelty_flag": true,
+      "druggability": "low"
+    }
+  ],
+  "agent_trace": [
+    {
+      "step": 0,
+      "tool": "opentargets_associations",
+      "input": {
+        "disease_name": "non-small cell lung cancer",
+        "top_n": 20
+      },
+      "output_summary": "{'disease': 'non-small cell lung cancer', 'efo_id': 'EFO_0003060', 'targets': [{'ensembl_id': 'ENSG00000146648', 'gene_symbol': 'EGFR', 'gene_name': 'epidermal growth factor receptor', 'biotype': 'protein_coding', 'overall_score': 0.8878809855539699, 'genetic_association_score': 0.9333873648538534, "
+    },
+    {
+      "step": 0,
+      "tool": "uniprot_protein_info",
+      "input": {
+        "gene_symbol": "EGFR"
+      },
+      "output_summary": "{'error': '400 Client Error: Bad Request for url: https://rest.uniprot.org/uniprotkb/search?query=gene%3AEGFR+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&fields=id%2Cgene_names%2Cprotein_name%2Corganism_name%2Csubcellular_location%2Cfunction%2Cgo%2Ckeyword%2Cfeature&size=1'}"
+    },
+    {
+      "step": 0,
+      "tool": "uniprot_protein_info",
+      "input": {
+        "gene_symbol": "KRAS"
+      },
+      "output_summary": "{'error': '400 Client Error: Bad Request for url: https://rest.uniprot.org/uniprotkb/search?query=gene%3AKRAS+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&fields=id%2Cgene_names%2Cprotein_name%2Corganism_name%2Csubcellular_location%2Cfunction%2Cgo%2Ckeyword%2Cfeature&size=1'}"
+    },
+    {
+      "step": 0,
+      "tool": "uniprot_protein_info",
+      "input": {
+        "gene_symbol": "TP53"
+      },
+      "output_summary": "{'error': '400 Client Error: Bad Request for url: https://rest.uniprot.org/uniprotkb/search?query=gene%3ATP53+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&fields=id%2Cgene_names%2Cprotein_name%2Corganism_name%2Csubcellular_location%2Cfunction%2Cgo%2Ckeyword%2Cfeature&size=1'}"
+    },
+    {
+      "step": 0,
+      "tool": "uniprot_protein_info",
+      "input": {
+        "gene_symbol": "PIK3CA"
+      },
+      "output_summary": "{'error': '400 Client Error: Bad Request for url: https://rest.uniprot.org/uniprotkb/search?query=gene%3APIK3CA+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&fields=id%2Cgene_names%2Cprotein_name%2Corganism_name%2Csubcellular_location%2Cfunction%2Cgo%2Ckeyword%2Cfeature&size=1'}"
+    },
+    {
+      "step": 0,
+      "tool": "uniprot_protein_info",
+      "input": {
+        "gene_symbol": "BRAF"
+      },
+      "output_summary": "{'error': '400 Client Error: Bad Request for url: https://rest.uniprot.org/uniprotkb/search?query=gene%3ABRAF+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&fields=id%2Cgene_names%2Cprotein_name%2Corganism_name%2Csubcellular_location%2Cfunction%2Cgo%2Ckeyword%2Cfeature&size=1'}"
+    },
+    {
+      "step": 0,
+      "tool": "uniprot_protein_info",
+      "input": {
+        "gene_symbol": "KEAP1"
+      },
+      "output_summary": "{'error': '400 Client Error: Bad Request for url: https://rest.uniprot.org/uniprotkb/search?query=gene%3AKEAP1+AND+organism_id%3A9606+AND+reviewed%3Atrue&format=json&fields=id%2Cgene_names%2Cprotein_name%2Corganism_name%2Csubcellular_location%2Cfunction%2Cgo%2Ckeyword%2Cfeature&size=1'}"
+    },
+    {
+      "step": 1,
+      "tool": "string_network",
+      "input": {
+        "confidence_threshold": 0.4,
+        "gene_symbol": "EGFR"
+      },
+      "output_summary": "{'gene_symbol': 'EGFR', 'string_id': '9606.ENSP00000275493', 'num_interactions': 10, 'hub_score': 0.999, 'top_interactors': [{'partner_symbol': 'PTPN11', 'combined_score': 0.999, 'experimental_score': 0.995, 'database_score': 0.9, 'textmining_score': 0.991}, {'partner_symbol': 'HBEGF', 'combined_sco"
+    },
+    {
+      "step": 2,
+      "tool": "string_network",
+      "input": {
+        "confidence_threshold": 0.4,
+        "gene_symbol": "KRAS"
+      },
+      "output_summary": "{'gene_symbol': 'KRAS', 'string_id': '9606.ENSP00000256078', 'num_interactions': 10, 'hub_score': 0.998, 'top_interactors': [{'partner_symbol': 'RALGDS', 'combined_score': 0.999, 'experimental_score': 0.716, 'database_score': 0.9, 'textmining_score': 0.98}, {'partner_symbol': 'BRAF', 'combined_score"
+    },
+    {
+      "step": 2,
+      "tool": "string_network",
+      "input": {
+        "confidence_threshold": 0.4,
+        "gene_symbol": "TP53"
+      },
+      "output_summary": "{'gene_symbol': 'TP53', 'string_id': '9606.ENSP00000269305', 'num_interactions': 10, 'hub_score': 0.999, 'top_interactors': [{'partner_symbol': 'SFN', 'combined_score': 0.999, 'experimental_score': 0.981, 'database_score': 0.75, 'textmining_score': 0.859}, {'partner_symbol': 'EP300', 'combined_score"
+    },
+    {
+      "step": 2,
+      "tool": "string_network",
+      "input": {
+        "confidence_threshold": 0.4,
+        "gene_symbol": "PIK3CA"
+      },
+      "output_summary": "{'gene_symbol': 'PIK3CA', 'string_id': '9606.ENSP00000263967', 'num_interactions': 10, 'hub_score': 0.999, 'top_interactors': [{'partner_symbol': 'PIK3R5', 'combined_score': 0.999, 'experimental_score': 0.09, 'database_score': 0.9, 'textmining_score': 0.991}, {'partner_symbol': 'PIK3R2', 'combined_s"
+    },
+    {
+      "step": 2,
+      "tool": "string_network",
+      "input": {
+        "confidence_threshold": 0.4,
+        "gene_symbol": "BRAF"
+      },
+      "output_summary": "{'gene_symbol': 'BRAF', 'string_id': '9606.ENSP00000419060', 'num_interactions': 10, 'hub_score': 0.998, 'top_interactors': [{'partner_symbol': 'YWHAZ', 'combined_score': 0.999, 'experimental_score': 0.989, 'database_score': 0.9, 'textmining_score': 0.45}, {'partner_symbol': 'HRAS', 'combined_score'"
+    },
+    {
+      "step": 2,
+      "tool": "pubmed_literature",
+      "input": {
+        "gene_symbol": "EGFR",
+        "max_abstracts": 5
+      },
+      "output_summary": "{'gene_symbol': 'EGFR', 'query': '\"EGFR\"[TIAB] AND (\"2023\"[PDAT] : \"3000\"[PDAT])', 'total_publications': 26606, 'recency_score': 1.0, 'recent_abstracts': [{'pmid': '42179048', 'title': 'Design and Pictet-Spengler enabled synthesis of carboxamide-substituted imidazo[1,2-<i>a</i>]quinoxalines as dual "
+    },
+    {
+      "step": 2,
+      "tool": "pubmed_literature",
+      "input": {
+        "gene_symbol": "KRAS",
+        "max_abstracts": 5
+      },
+      "output_summary": "{'gene_symbol': 'KRAS', 'query': '\"KRAS\"[TIAB] AND (\"2023\"[PDAT] : \"3000\"[PDAT])', 'total_publications': 7937, 'recency_score': 1.0, 'recent_abstracts': [{'pmid': '42178060', 'title': 'Macrophage-hitchhiking nanomedicine codelivering gemcitabine and KRAS G12D inhibitor orchestrates chemo-immunothera"
+    },
+    {
+      "step": 2,
+      "tool": "pubmed_literature",
+      "input": {
+        "gene_symbol": "TP53",
+        "max_abstracts": 5
+      },
+      "output_summary": "{'gene_symbol': 'TP53', 'query': '\"TP53\"[TIAB] AND (\"2023\"[PDAT] : \"3000\"[PDAT])', 'total_publications': 10306, 'recency_score': 1.0, 'recent_abstracts': [{'pmid': '42179127', 'title': '[Multidisciplinary approach to the treatment of aggressive hormone releasing adenoma: a case report and literature"
+    }
+  ],
+  "scoring_weights": {
+    "genetic_association": 0.35,
+    "clinical_precedent": 0.3,
+    "string_hub_score": 0.2,
+    "pubmed_recency": 0.15
+  }
+}
